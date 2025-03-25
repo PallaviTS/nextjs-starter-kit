@@ -103,7 +103,36 @@ The project is configured for seamless deployment on Vercel. To deploy:
 4. Deploy:
    - Vercel will automatically deploy your project
    - Each push to the main branch will trigger a new deployment
-   - Preview deployments are created for other branches
+   - Preview deployments are created for branches matching:
+     - `dev`
+     - `feature/*`
+     - `fix/*`
+
+### Branch Previews
+
+The project is configured to automatically create preview deployments for different branches:
+
+- `main` - Production deployment
+- `dev` - Development environment
+- `feature/*` - Feature branch previews
+- `fix/*` - Bug fix previews
+
+Each preview deployment will have its own URL and environment, making it easy to test changes before merging to main.
+
+To create a preview deployment:
+
+1. Create a new branch with the appropriate prefix:
+   ```bash
+   git checkout -b feature/new-feature
+   # or
+   git checkout -b fix/bug-fix
+   ```
+2. Push your changes:
+   ```bash
+   git push origin feature/new-feature
+   ```
+3. Vercel will automatically create a preview deployment
+4. The preview URL will be available in your Vercel dashboard and GitHub PR
 
 For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
