@@ -64,8 +64,14 @@ The project uses a custom teal theme which can be modified in the `globals.css` 
 UI components are built using shadcn/ui. To add more components:
 
 ```bash
-pnpm dlx shadcn-ui@latest add <component-name>
+# For workspace projects (using pnpm)
+pnpm dlx shadcn@latest add <component-name> -w
+
+# Example: Adding a button component
+pnpm dlx shadcn@latest add button -w
 ```
+
+Note: The `-w` flag is required when using pnpm workspaces to ensure the component is added to the root workspace.
 
 ## Learn More
 
