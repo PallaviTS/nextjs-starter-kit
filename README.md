@@ -83,6 +83,38 @@ To learn more about the technologies used in this project:
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+The project is configured for seamless deployment on Vercel. To deploy:
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+
+2. Import your project to Vercel:
+
+   - Go to [https://vercel.com/new](https://vercel.com/new)
+   - Choose your Git repository
+   - Vercel will automatically detect Next.js and configure the build settings
+
+3. Environment Variables:
+
+   - Copy variables from `.env.example` to your Vercel project
+   - Go to Project Settings → Environment Variables
+   - Add the required environment variables
+   - Update `NEXT_PUBLIC_APP_URL` to your production URL
+
+4. Deploy:
+   - Vercel will automatically deploy your project
+   - Each push to the main branch will trigger a new deployment
+   - Preview deployments are created for other branches
+
+For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+### Production Checks
+
+Before deploying:
+
+- Ensure all environment variables are set
+- Test the production build locally:
+  ```bash
+  pnpm build
+  pnpm start
+  ```
+- Check the [deployment documentation](https://vercel.com/docs/deployments/overview) for more information
