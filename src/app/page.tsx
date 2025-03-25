@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
             Built with a beautiful teal theme.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg">Get Started</Button>
+            <Button asChild size="lg">
+              <Link href="/dashboard">Get Started</Link>
+            </Button>
             <Button size="lg" variant="outline">Learn More</Button>
           </div>
         </div>
