@@ -6,8 +6,26 @@ import { Navbar } from "@/components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Kit",
+  title: {
+    template: '%s | Next.js Starter Kit',
+    default: 'Next.js Starter Kit',
+  },
   description: "A modern starter kit with Next.js, Tailwind CSS, and shadcn/ui",
+  icons: {
+    icon: [
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      }
+    ],
+    shortcut: ["/icon.svg"],
+    apple: [
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      }
+    ],
+  },
 };
 
 export default function RootLayout({
